@@ -1,0 +1,41 @@
+{
+  "name": "node_api_starter_kit",
+  "version": "0.1.0",
+  "description": "Starter kit to build API based on node and koa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Louis Thiry <louis.thiry@outlook.fr>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "dependencies": {
+    "babel-eslint": "^4.1.6",
+    "bcrypt": "^0.8.5",
+    "bluebird": "^3.0.5",
+    "cpy": "^3.4.1",
+    "debug": "^2.2.0",
+    "dotenv": "^1.2.0",
+    "eslint": "^1.10.3",
+    "got": "^5.1.0",
+    "http-errors": "^1.4.0",
+    "koa-bouncer": "^4.2.0",
+    "koa-cors": "0.0.16",
+    "koa-file-server": "^2.3.1",
+    "koa-generic-session": "^1.10.1",
+    "koa-json": "^1.1.1",
+    "koa-passport": "^1.2.0",
+    "koa-router": "^5.2.3",
+    "koala": "^1.0.0",
+    "lodash": "^3.10.1",
+    "mongodb": "^2.0.47",
+    "mongoose": "^4.2.4",
+    "passport-local": "^1.0.0"
+  },
+  "engines": {
+    "node": "4.2.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "supertest": "^1.1.0"
+  }
+}

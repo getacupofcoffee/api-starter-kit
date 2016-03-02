@@ -1,0 +1,80 @@
+# API starter kit
+swagger: '2.0'
+info:
+# almoeda API
+swagger: '2.0'
+info:
+  title: API starter kit
+  description: Description of API starter kit
+  version: "1.0.0"
+# the domain of the service
+#host:
+# array of all schemes that your API supports
+schemes:
+  - http
+# will be prefixed to all paths
+#basePath:
+produces:
+  - application/json
+
+paths:
+#############################################################
+  ###### authentication routes #######
+  /auth/register:
+    post:
+      summary: register creating a user
+      description: generic route to create a user with username and password
+      parameters:
+        - name: username
+          in: body
+          required: true
+          type: string
+        - name: password
+          in: body
+          required: true
+          type: string
+      tags:
+        -
+      responses:
+        200:
+          description: successfull registering
+          schema:
+        400:
+          description: bad request due to missing parameter
+          schema:
+        500: internal error
+  /auth/login:
+    post: login with username and password
+      summary:
+      description:
+      parameters:
+        - name: username
+          in: body
+          required: true
+          type: string
+        - name: password
+          in: body
+          required: true
+          type: string
+      tags:
+        -
+      responses:
+        200:
+          description:
+          schema:
+        400:
+          description: bad request due to missing parameter
+          schema:
+        500: internal error
+
+definitions:
+
+  user:
+    type: object
+    properties:
+      username:
+        type:
+        description:
+      password:
+        type:
+        description:

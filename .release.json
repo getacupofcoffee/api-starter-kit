@@ -1,0 +1,24 @@
+{
+    "non-interactive": false,
+    "dry-run": false,
+    "verbose": true,
+    "force": false,
+    "pkgFiles": ["package.json"],
+    "increment": "patch",
+    "commitMessage": "Release %s",
+    "tagName": "%s",
+    "tagAnnotation": "Release %s",
+    "changelogCommand": "conventional-changelog -p angular -i CHANGELOG.md -w",
+    "dist": {
+        "repo": "marge@198.211.124.44:repos/amoeda-api.git",
+        "stageDir": ".stage",
+        "baseDir": "dist",
+        "files": ["**/*"],
+        "pkgFiles": null
+    },
+    "github": {
+        "release": true,
+        "releaseName": "Release %s",
+        "tokenRef": "GITHUB_API_TOKEN"
+    }
+}

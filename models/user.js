@@ -4,6 +4,7 @@ var bcrypt = require('bcrypt');
 var SALT_WORK_FACTOR = 10;
 var Promise = require('bluebird');
 var debug = require('debug')('models:user');
+var HttpError = require('http-errors');
 
 const hashPassword = function (password) {
   return Promise.resolve()
@@ -100,9 +101,15 @@ UserSchema.statics.changePassword = function (username, actualPassword, newPassw
 }
 
 UserSchema.statics.createUser = function (newUser, username, password, lat, lng) {
-  newUser.username = username;
-  newUser.password = password;
-  return newUser.save()
+  return User.findOne({ username: username })
+    .then((user)=> {
+      if (user) {
+        throw new HttpError[401]('username ' + username + ' already exists');
+      }
+      newUser.username = username;
+      newUser.password = password;
+      return newUser.save()
+    })
     .then((user) => {
       return {
         userCreated: true
